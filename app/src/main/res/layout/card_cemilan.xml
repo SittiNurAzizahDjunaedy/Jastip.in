@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="111dp"
+    android:layout_marginVertical="12dp"
+    android:layout_marginHorizontal="12dp">
+
+    <ImageView
+        android:layout_width="134dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/kuping_gajah"
+        android:id="@+id/gambar_card"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kuping Gajah berwarna"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/tv_title_card"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kuping Gajah berwarna"
+            android:textSize="16sp"
+            android:layout_marginTop="9dp"
+            android:id="@+id/tv_subtitle_card"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp. 30000"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_harga_card"/>
+
+    </LinearLayout>
+
+</LinearLayout>
