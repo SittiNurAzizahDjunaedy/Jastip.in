@@ -4,5 +4,6 @@ data class ModelCemilan(
     var cemilanName: String = "",
     var cemilanSub: String = "",
     var cemilanHarga: String = "",
-    var cemilanPhoto: Int = 0
+    var cemilanPhoto: Int = 0,
+    var cemilanDesc: String = "",
 )

@@ -12,7 +12,15 @@ import com.example.jastpin.CemilanAdapter.*
 import com.example.jastpin.model.ModelCemilan
 
 class CemilanAdapter (private val listData: ArrayList<ModelCemilan>) : RecyclerView.Adapter<ListViewHolder>() {
+    private lateinit var onItemClickCallbackadapter: OnItemClickCallback
 
+    interface OnItemClickCallback {
+        fun onItemClicked(data: ModelCemilan)
+    }
+
+    fun setOnItemClickCallback(OnItemClickCallback : OnItemClickCallback){
+        this.onItemClickCallbackadapter = OnItemClickCallback
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.card_cemilan, parent, false)
         return ListViewHolder(view)
@@ -27,6 +35,8 @@ class CemilanAdapter (private val listData: ArrayList<ModelCemilan>) : RecyclerV
         holder.tvNameCemilan.text = data.cemilanName
         holder.tvSubCemilan.text = data.cemilanSub
         holder.tvHargaCemilan.text = data.cemilanHarga
+
+        holder.itemView.setOnClickListener { onItemClickCallbackadapter.onItemClicked(listData[holder.adapterPosition]) }
     }
 
     override fun getItemCount(): Int {

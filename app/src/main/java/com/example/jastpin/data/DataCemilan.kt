@@ -37,6 +37,17 @@ object DataCemilan {
         "Rp. 42.000",
     )
 
+    private val cemilanDeskripsi = arrayOf(
+        "Kue kuping gajah memiliki tampilan unik dan cukup menantang, kuping gajah merupakan salah satu kue tradisional indonesia sebagai resep kue peninggalan leluhur.",
+        "desc",
+        "desc",
+        "desc",
+        "desc",
+        "desc",
+        "desc",
+        "desc",
+    )
+
     private val cemilanImages = intArrayOf(
         R.drawable.kuping_gajah,
         R.drawable.kacang_polong,
@@ -56,6 +67,7 @@ object DataCemilan {
                 data.cemilanSub = cemilanSub[position]
                 data.cemilanHarga = cemilanHarga[position]
                 data.cemilanPhoto = cemilanImages[position]
+                data.cemilanDesc = cemilanDeskripsi[position]
                 list.add(data)
             }
             return list
